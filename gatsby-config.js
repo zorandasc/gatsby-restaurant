@@ -3,6 +3,7 @@ module.exports = {
     title: `Restaurant`,
     description: `Kick off your next restaurant bussines, great Gatsby project with this default starter.`,
     author: `@zorandsc`,
+    siteUrl: "https://practical-mayer-7bea4f.netlify.com",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
