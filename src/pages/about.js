@@ -2,11 +2,11 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
+const AboutPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <h3>Hi people from index</h3>
+    <SEO title="About" />
+    <h3>Hi people from AboutPage</h3>
   </Layout>
 )
 
-export default IndexPage
+export default AboutPage
