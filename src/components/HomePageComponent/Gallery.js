@@ -6,25 +6,15 @@ import { Section, styles } from "../../utils"
 
 export default function Gallery() {
   const data = useStaticQuery(graphql`
-    query {
-      img1: file(relativePath: { eq: "homeGallery/img-1.jpeg" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
-        }
-      }
-      img2: file(relativePath: { eq: "homeGallery/img-2.jpeg" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
-        }
-      }
-      img3: file(relativePath: { eq: "homeGallery/img-3.jpeg" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid_tracedSVG
+    {
+      getImages: allFile(filter: { relativeDirectory: { eq: "homeGallery" } }) {
+        edges {
+          node {
+            childImageSharp {
+              fluid(maxWidth: 500) {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+            }
           }
         }
       }
@@ -33,18 +23,14 @@ export default function Gallery() {
   return (
     <Section>
       <GalleryWrapper>
-        <div className="item item-1">
-          <Img fluid={data.img1.childImageSharp.fluid} />
-          <p className="info">awsome pizza</p>
-        </div>
-        <div className="item item-2">
-          <Img fluid={data.img2.childImageSharp.fluid} />
-          <p className="info">awsome bacon</p>
-        </div>
-        <div className="item item-3">
-          <Img fluid={data.img3.childImageSharp.fluid} />
-          <p className="info">awsome steack</p>
-        </div>
+        {data.getImages.edges.map(({ node }, index) => {
+          return (
+            <div key={index} className={`item item-${index + 1}`}>
+              <Img fluid={node.childImageSharp.fluid}></Img>
+              <p className="info">awsome food</p>
+            </div>
+          )
+        })}
       </GalleryWrapper>
     </Section>
   )
