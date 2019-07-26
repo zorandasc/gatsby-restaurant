@@ -1,8 +1,8 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { Section, styles } from "../../utils"
+import { Section, styles, Title } from "../../utils"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import Product from "./Product"
 
 export default function Menu() {
   const { menu } = useStaticQuery(graphql`
@@ -26,20 +26,14 @@ export default function Menu() {
   `)
   return (
     <Section>
-      <MenuWrapper>
+      <Title title="featured items" message="little taste"></Title>
+      <ProductList>
         {menu.edges.map(({ node }, index) => {
-          return (
-            <div key={index}>
-              <p>{node.name}</p>
-              <Img fixed={node.img.fixed}></Img>
-              <p>{node.ingredients}</p>
-              <p>{node.price}</p>
-            </div>
-          )
+          return <Product key={index} product={node}></Product>
         })}
-      </MenuWrapper>
+      </ProductList>
     </Section>
   )
 }
 
-const MenuWrapper = styled.div``
+const ProductList = styled.div``
