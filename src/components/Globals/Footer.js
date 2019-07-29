@@ -31,6 +31,7 @@ export default class Footer extends Component {
           {this.state.icons.map(item => {
             return (
               <a
+                aria-label="social links"
                 key={item.id}
                 href={item.path}
                 target="_blank"
