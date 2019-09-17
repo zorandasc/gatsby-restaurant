@@ -69,8 +69,7 @@ function SEO({ description, lang, meta, title }) {
         },
       ].concat(meta)}
     >
-      <script>
-        {`
+      <script>{`
         window.fbAsyncInit = function() {
           FB.init({
             xfbml: true,
@@ -84,8 +83,7 @@ function SEO({ description, lang, meta, title }) {
         js = d.createElement(s); js.id = id;
         js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
         fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));`}
-      </script>
+      }(document, 'script', 'facebook-jssdk'));`}</script>
     </Helmet>
   )
 }
