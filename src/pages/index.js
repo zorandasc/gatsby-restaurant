@@ -21,6 +21,7 @@ const IndexPage = () => (
       class="fb-customerchat"
       attribution="setup_tool"
       page_id="119106702808633"
+      theme_color="#d2aa5c"
     ></div>
     <QuickInfo></QuickInfo>
     <Gallery></Gallery>
