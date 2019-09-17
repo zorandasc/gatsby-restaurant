@@ -16,6 +16,8 @@ const IndexPage = () => (
         <BannerButton style={{ margin: "2rem auto" }}>menu</BannerButton>
       </Banner>
     </HomeHeader>
+    <div id="fb-root"></div>
+    <div class="fb-customerchat" page_id="119106702808633"></div>
     <QuickInfo></QuickInfo>
     <Gallery></Gallery>
     <Menu></Menu>
