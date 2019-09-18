@@ -14,6 +14,11 @@ import Footer from "../components/Globals/Footer"
 const Layout = ({ children }) => {
   return (
     <>
+      <div
+        class="fb-customerchat"
+        attribution="setup_tool"
+        page_id="119106702808633"
+      ></div>
       <GlobalStyle />
       <Navbar />
       {children}
