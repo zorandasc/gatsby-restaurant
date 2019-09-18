@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <div
-        class="fb-customerchat"
+        className="fb-customerchat"
         attribution="setup_tool"
         page_id="119106702808633"
       ></div>
