@@ -15,6 +15,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyle />
+      <div id="fb-root"></div>
       <div className="fb-customerchat" page_id="119106702808633"></div>
       <Navbar />
       {children}
