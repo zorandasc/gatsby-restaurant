@@ -11,8 +11,7 @@ import Menu from "../components/HomePageComponent/Menu"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <div id="fb-root"></div>
-    <div className="fb-customerchat" page_id="119106702808633"></div>
+
     <HomeHeader img={img}>
       <Banner title="eatery" subtitle="55 main street - Sant Monica, CA">
         <BannerButton style={{ margin: "2rem auto" }}>menu</BannerButton>
