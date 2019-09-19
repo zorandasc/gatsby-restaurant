@@ -70,7 +70,7 @@ function SEO({ description, lang, meta, title }) {
       ].concat(meta)}
     >
       <script>{`
-  window.callbellSettings = {
+   window.callbellSettings = {
     token: "3nck19ywCuutTYnHhdAkkfH5"
   };
       `}</script>
