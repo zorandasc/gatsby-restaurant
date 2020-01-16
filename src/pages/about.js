@@ -8,7 +8,7 @@ const AboutPage = () => (
   <Layout>
     <SEO title="About" />
     <PageHeader img={aboutimg}>
-      <Banner title="about us" subtitle="a little about us"></Banner>
+      <Banner title="about us" subtitle="a little about us :> "></Banner>
     </PageHeader>
   </Layout>
 )
